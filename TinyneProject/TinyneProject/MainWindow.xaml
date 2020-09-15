@@ -26,16 +26,16 @@
 
         <Style x:Key="WindowStyle" TargetType="{x:Type Window}">
             <Setter Property="AllowsTransparency" Value="true" />
-                    <Setter Property="WindowStyle" Value="None" />
-                    <Setter Property="Background" Value="Transparent" />
-                    <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
-                    <Setter Property="Template">
+            <Setter Property="WindowStyle" Value="None" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
+            <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Window}">
                         <Grid Margin="7"
                               TextOptions.TextRenderingMode="ClearType"
                               TextOptions.TextFormattingMode="Display">
-                            
+
                             <Border x:Name="Container"
                                     BorderThickness="0"
                                     Background="White"
@@ -54,7 +54,7 @@
                                 </Grid.RowDefinitions>
 
                                 <Grid WindowChrome.IsHitTestVisibleInChrome="True">
-                                    
+
                                     <Grid.ColumnDefinitions>
                                         <!-- Logo -->
                                         <ColumnDefinition Width="Auto"/>
@@ -67,7 +67,7 @@
                                             Grid.Column="0"
                                             Style="{Binding}"/>
 
-                                    
+
                                     <!-- WINDOW MANIPULATION BUTTONS -->
                                     <StackPanel Orientation="Horizontal"
                                                 VerticalAlignment="Stretch"
@@ -91,7 +91,7 @@
                                 <ContentPresenter Grid.Row="1"/>
 
                             </Grid>
-                            
+
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -102,8 +102,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-    
+
     </Window.Resources>
-    
 
 </Window>
