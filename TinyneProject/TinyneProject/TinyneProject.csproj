@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Services\ParameterizedRelayCommand.cs" />
+    <Compile Include="Services\RelayCommand.cs" />
+    <Compile Include="Services\StorageIOService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +96,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dialogs\" />
+    <Folder Include="Models\" />
+    <Folder Include="Resources\Fonts\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Styles\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

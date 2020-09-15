@@ -5,6 +5,105 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TinyneProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="600">
+        Title="MainWindow" 
+        
+        Height="500" Width="280" 
+        
+        WindowStyle="None"
+        AllowsTransparency="True"
+        
+        Style="{DynamicResource WindowStyle}">
+
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome NonClientFrameEdges="None"
+                      GlassFrameThickness="0"
+                      ResizeBorderThickness="7"
+                      CaptionHeight="30"
+                      CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+
+        <Style x:Key="WindowStyle" TargetType="{x:Type Window}">
+            <Setter Property="AllowsTransparency" Value="true" />
+                    <Setter Property="WindowStyle" Value="None" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
+                    <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Grid Margin="7"
+                              TextOptions.TextRenderingMode="ClearType"
+                              TextOptions.TextFormattingMode="Display">
+                            
+                            <Border x:Name="Container"
+                                    BorderThickness="0"
+                                    Background="White"
+                                    CornerRadius="5"/>
+
+                            <Grid>
+                                <Grid.OpacityMask>
+                                    <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                </Grid.OpacityMask>
+
+                                <Grid.RowDefinitions>
+                                    <!-- Buttons -->
+                                    <RowDefinition Height="23"/>
+                                    <!-- Content -->
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid WindowChrome.IsHitTestVisibleInChrome="True">
+                                    
+                                    <Grid.ColumnDefinitions>
+                                        <!-- Logo -->
+                                        <ColumnDefinition Width="Auto"/>
+                                        <!-- Buttons -->
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- LOGO -->
+                                    <Button Tag="LogoButton"
+                                            Grid.Column="0"
+                                            Style="{Binding}"/>
+
+                                    
+                                    <!-- WINDOW MANIPULATION BUTTONS -->
+                                    <StackPanel Orientation="Horizontal"
+                                                VerticalAlignment="Stretch"
+                                                HorizontalAlignment="Right"
+                                                FlowDirection="RightToLeft"
+                                                Grid.Column="1">
+
+                                        <Button Tag="CloseButton"
+                                                Style="{Binding}"/>
+
+                                        <Button Tag="TopMostButton"
+                                                Style="{Binding}"/>
+
+                                        <Button Tag="MinimizeButton"
+                                                Style="{Binding}"/>
+
+                                    </StackPanel>
+
+                                </Grid>
+
+                                <ContentPresenter Grid.Row="1"/>
+
+                            </Grid>
+                            
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="ResizeMode" Value="CanResizeWithGrip">
+                    <Setter Property="Template" Value="{DynamicResource WindowTemplateKey}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     
+    </Window.Resources>
+    
+
 </Window>
