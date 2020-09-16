@@ -1,7 +1,82 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:TinyneProject">
+
+    <!--#region White zone-->
+
+    <SolidColorBrush x:Key="WhiteBrush" Color="White"/>
+    <SolidColorBrush x:Key="WhiteBrushLowOpac" Color="White" Opacity=".2"/>
+    <SolidColorBrush x:Key="WhiteBrushMidOpac" Color="White" Opacity=".5"/>
+    <SolidColorBrush x:Key="WhiteBrushHighOpac" Color="White" Opacity=".8"/>
+
+    <!--#endregion-->
+    
+    <!--#region Notes backgrounds -->
+    
+    <Color x:Key="RedBackgroundColor">#EC7B7B</Color>
+    <SolidColorBrush x:Key="RedBackgroundBrush" Color="{DynamicResource RedBackgroundColor}"/>
+
+    <Color x:Key="GreenBackgroundColor">#7BEC7B</Color>
+    <SolidColorBrush x:Key="GreenBackgroundBrush" Color="{DynamicResource GreenBackgroundColor}"/>
+
+    <Color x:Key="BlueBackgroundColor">#7BA4EC</Color>
+    <SolidColorBrush x:Key="BlueBackgroundBrush" Color="{DynamicResource BlueBackgroundColor}"/>
+
+    <Color x:Key="YellowBackgroundColor">#ECD27B</Color>
+    <SolidColorBrush x:Key="YellowBackgroundBrush" Color="{DynamicResource YellowBackgroundColor}"/>
+
+    <Color x:Key="BlackBackgroundColor">#555555</Color>
+    <SolidColorBrush x:Key="BlackBackgroundBrush" Color="{DynamicResource BlackBackgroundColor}"/>
+
+    <!--#endregion-->
+
+    
+    <Color x:Key="WindowBackgroundColor">#D6D6D6</Color>
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{DynamicResource WindowBackgroundColor}"/>
+    
+
+
+    <!--#region Window Buttons -->
+    
+    <Color x:Key="WindowButtonForeColor">#ABABAB</Color>
+    <SolidColorBrush x:Key="WindowButtonForeBrush" Color="{DynamicResource WindowButtonForeColor}"/>
+
+    <Color x:Key="WindowButtonHoverForeColor">#7F7F7F</Color>
+    <SolidColorBrush x:Key="WindowButtonHoverForeBrush" Color="{DynamicResource WindowButtonHoverForeColor}"/>
+
+    <Color x:Key="WindowButtonPressedForeColor">#555555</Color>
+    <SolidColorBrush x:Key="WindowButtonPressedForeBrush" Color="{DynamicResource WindowButtonPressedForeColor}"/>
+
     
     
+    <Color x:Key="WindowButtonBackColor">Transparent</Color>
+    <SolidColorBrush x:Key="WindowButtonBackBrush" Color="{DynamicResource WindowButtonBackColor}"/>
+
+    <Color x:Key="WindowButtonHoverBackColor">#CBCBCB</Color>
+    <SolidColorBrush x:Key="WindowButtonHoverBackBrush" Color="{DynamicResource WindowButtonHoverBackColor}"/>
+
+    <Color x:Key="WindowButtonPressedBackColor">#BCBCBC</Color>
+    <SolidColorBrush x:Key="WindowButtonPressedBackBrush" Color="{DynamicResource WindowButtonPressedBackColor}"/>
+
     
+    
+    <Color x:Key="WindowCloseButtonHoverForeColor">#F8F8F8</Color>
+    <SolidColorBrush x:Key="WindowCloseButtonHoverForeBrush" Color="{DynamicResource WindowCloseButtonHoverForeColor}"/>
+
+    <Color x:Key="WindowCloseButtonPressedForeColor">#FFFFFF</Color>
+    <SolidColorBrush x:Key="WindowCloseButtonPressedForeBrush" Color="{DynamicResource WindowCloseButtonPressedForeColor}"/>
+
+    <Color x:Key="WindowCloseButtonHoverBackColor">#EC7B7B</Color>
+    <SolidColorBrush x:Key="WindowCloseButtonHoverBackBrush" Color="{DynamicResource WindowCloseButtonHoverBackColor}"/>
+
+    <Color x:Key="WindowCloseButtonPressedBackColor">#E85757</Color>
+    <SolidColorBrush x:Key="WindowCloseButtonPressedBackBrush" Color="{DynamicResource WindowCloseButtonPressedBackColor}"/>
+
+    <!--#endregion-->
+
+
+    <Color x:Key="ListBoxBackgroundColor">#ABABAB</Color>
+    <SolidColorBrush x:Key="ListBoxBackgroundBrush" Color="{DynamicResource ListBoxBackgroundColor}"/>
+    
+
 </ResourceDictionary>

@@ -1,5 +1,108 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:TinyneProject.Resources.Styles">
+                    xmlns:local="clr-namespace:TinyneProject">
     
+    
+    <Style x:Key="TScrollViewerStyle" TargetType="{x:Type ScrollViewer}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="11"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <ScrollContentPresenter 
+                                Grid.Column="0" Grid.Row="0" 
+                                Margin="{TemplateBinding Padding}" 
+                                Content="{TemplateBinding Content}" 
+                                ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                CanContentScroll="{TemplateBinding CanContentScroll}"/>
+
+                        <ScrollBar 
+                                Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" 
+                                Grid.Column="1" Grid.Row="0" 
+                                x:Name="PART_VerticalScrollBar" 
+                                Style="{DynamicResource TScrollBarStyle}" 
+                                Orientation="Vertical" 
+                                Value="{Binding Path=VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportHeight}" 
+                                Minimum="0" Maximum="{TemplateBinding ScrollableHeight}"
+                                />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="TScrollBarStyle" TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsFlicksEnabled" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="GridRoot" 
+                          Width="10" 
+                          Background="Transparent" 
+                          HorizontalAlignment="Left">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.00001*"/>
+                        </Grid.RowDefinitions>
+
+                        <Track Grid.Row="0" x:Name="PART_Track" Orientation="Vertical" IsDirectionReversed="true">
+                            <Track.Thumb>
+                                <Thumb Style="{DynamicResource TThumbStyle}"/>
+                            </Track.Thumb>
+                        </Track>
+
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Orientation" Value="Horizontal">
+
+                            <Setter Property="LayoutTransform" TargetName="GridRoot">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+
+                            <Setter TargetName="PART_Track" Property="Orientation" Value="Vertical"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="TThumbStyle" TargetType="{x:Type Thumb}">
+        <Setter Property="Margin" Value="0 1 0 5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid x:Name="Grid">
+                        <Rectangle 
+                                HorizontalAlignment="Stretch" 
+                                x:Name="Rectangle" 
+                                VerticalAlignment="Stretch" 
+                                Width="6" Height="Auto" 
+                                RadiusX="3" RadiusY="3" 
+                                Fill="Red"
+                                />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True"/>
+                        <Trigger Property="IsMouseOver" Value="True"/>
+                        <Trigger Property="IsEnabled" Value="False"/>
+                        <Trigger Property="IsDragging" Value="True"/>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

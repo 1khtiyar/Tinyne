@@ -10,6 +10,11 @@
                 <ResourceDictionary Source="/Resources/Values.xaml"/>
                 <ResourceDictionary Source="/Resources/ColorsBrushes.xaml"/>
                 <ResourceDictionary Source="/Resources/Vectors.xaml"/>
+
+                <ResourceDictionary Source="/Resources/Styles/Controls.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/ListBoxTemplate.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/WindowTemplate.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
