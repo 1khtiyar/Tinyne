@@ -103,4 +103,41 @@
         </Setter>
     </Style>
 
+
+
+    <Style x:Key="AddNoteButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="Button">
+                    <Border Name="BaseBorder" 
+                            BorderBrush="Transparent" 
+                            CornerRadius="5"
+                            Margin="5"
+                            Opacity=".3"
+                            Background="{DynamicResource WindowBackgroundBrush}">
+                        <Rectangle Name="IconItself" 
+                                       Style="{DynamicResource AddNoteImage}" 
+                                       Height="25px" Width="{Binding Path=Height,RelativeSource={RelativeSource Mode=Self}}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="1" TargetName="BaseBorder"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BaseBorder" Property="Background" Value="{DynamicResource WindowButtonHoverBackBrush}"/>
+                            <Setter TargetName="IconItself" Property="Fill" Value="{DynamicResource WindowButtonHoverForeBrush}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

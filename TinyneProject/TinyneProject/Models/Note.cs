@@ -5,7 +5,7 @@ using static TinyneProject.Models.NoteManager;
 namespace TinyneProject.Models
 {
     [Serializable]
-    internal class Note : OnPropertyChangedClass
+    public class Note : OnPropertyChangedClass
     {
         private string description;
         public string Description

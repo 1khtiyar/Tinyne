@@ -6,7 +6,7 @@ namespace TinyneProject.Models
     /// <summary>
     /// Implements <seealso cref="INotifyPropertyChanged"/>
     /// </summary>
-    internal class OnPropertyChangedClass : INotifyPropertyChanged
+    public class OnPropertyChangedClass : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -49,7 +49,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Button Style="{StaticResource LogoButtonStyle}"
-                                        Command="{Binding MenuTapCommand}"/>
+                                        Command="{Binding LogoWindowCommand}"/>
                                 
 
                                 <StackPanel Grid.Column="1"
@@ -59,13 +59,13 @@
                                             VerticalAlignment="Stretch">
 
                                     <Button Style="{StaticResource CloseButtonStyle}"
-                                            Command="{Binding CloseTapCommand}"/>
+                                            Command="{Binding CloseWindowCommand}"/>
                                     
                                     <Button Style="{StaticResource OnTopButtonStyle}"
-                                            Command="{Binding OnTopTapCommand}"/>
+                                            Command="{Binding TopMostWindowCommand}"/>
 
                                     <Button Style="{StaticResource MinimizeButtonStyle}"
-                                            Command="{Binding MinimizeTapCommand}"/>
+                                            Command="{Binding MinimizeWindowCommand}"/>
 
                                 </StackPanel>
                             </Grid>

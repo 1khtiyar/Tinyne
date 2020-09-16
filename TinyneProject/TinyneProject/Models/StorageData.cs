@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TinyneProject.Models
 {
-    internal class StorageData:OnPropertyChangedClass
+    public class StorageData:OnPropertyChangedClass
     {
 
         private ObservableCollection<Note> notes;

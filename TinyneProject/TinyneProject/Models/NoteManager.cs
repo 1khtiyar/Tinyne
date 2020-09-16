@@ -5,7 +5,7 @@ namespace TinyneProject.Models
     /// <summary>
     /// Static class for <seealso cref="Note"/>'s instance extension
     /// </summary>
-    internal static class NoteManager
+    public static class NoteManager
     {
         /// <summary>
         /// Aliases for note's background resources

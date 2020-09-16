@@ -27,9 +27,30 @@
     </WindowChrome.WindowChrome>
 
     <Grid>
-        <ListBox Style="{DynamicResource TListBoxStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="70"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        
+        
+        <ListBox Style="{DynamicResource TListBoxStyle}"
+                 Panel.ZIndex="1"
+                 Grid.Column="0" Grid.ColumnSpan="2"
+                 Grid.Row="0" Grid.RowSpan="2"
+                 ItemsSource="{Binding currentData.Notes,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
             
         </ListBox>
+
+
+        <Button Style="{DynamicResource AddNoteButtonStyle}" 
+                Grid.Column="1" Grid.Row="1"
+                Panel.ZIndex="2"
+                Command="{Binding AddNoteCommand}"/>
+
     </Grid>
     
 </Window>

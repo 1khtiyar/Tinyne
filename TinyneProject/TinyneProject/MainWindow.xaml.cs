@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TinyneProject.ViewModels;
 
 namespace TinyneProject
 {
@@ -10,6 +11,8 @@ namespace TinyneProject
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = new MainWindowViewModel(this);
         }
     }
 }
