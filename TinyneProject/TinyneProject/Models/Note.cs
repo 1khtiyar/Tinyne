@@ -19,8 +19,8 @@ namespace TinyneProject.Models
         }
 
 
-        private SolidColorBrush background;
-        public SolidColorBrush Background
+        private BackgroundBrushes background;
+        public BackgroundBrushes Background
         {
             get => background;
             set
@@ -34,13 +34,13 @@ namespace TinyneProject.Models
         public Note(string description, BackgroundBrushes brush)
         {
             Description = description;
-            Background = NoteManager.GetBrush(brush);
+            Background = brush;
         }
 
         public Note()
         {
             Description = "...";
-            Background = NoteManager.SetBrush();
+            Background = BackgroundBrushes.Default;
         }
     }
 }

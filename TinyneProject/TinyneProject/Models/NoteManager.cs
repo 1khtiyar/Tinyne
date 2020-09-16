@@ -70,7 +70,7 @@ namespace TinyneProject.Models
         /// </summary>
         /// <param name="brush"></param>
         /// <returns></returns>
-        public static SolidColorBrush GetBrush(BackgroundBrushes brush)
+        public static SolidColorBrush SetBrush(BackgroundBrushes brush)
         {
             SolidColorBrush colorBrush = null;
             try
@@ -91,7 +91,26 @@ namespace TinyneProject.Models
         /// <returns></returns>
         public static SolidColorBrush SetBrush()
         {
-            return NoteManager.GetBrush(BackgroundBrushes.Default);
+            return NoteManager.SetBrush(BackgroundBrushes.Default);
+        }
+
+        public static BackgroundBrushes GetEnum(string name)
+        {
+            switch (name)
+            {
+                case "RedBackgroundBrush":
+                    return NoteManager.BackgroundBrushes.Red;
+                case "BlueBackgroundBrush":
+                    return NoteManager.BackgroundBrushes.Blue;
+                case "GreenBackgroundBrush":
+                    return NoteManager.BackgroundBrushes.Green;
+                case "YellowBackgroundBrush":
+                    return NoteManager.BackgroundBrushes.Yellow;
+                case "BlackBackgroundBrush":
+                    return NoteManager.BackgroundBrushes.Black;
+                default:
+                    return NoteManager.BackgroundBrushes.Default;
+            }
         }
     }
 }

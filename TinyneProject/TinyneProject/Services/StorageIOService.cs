@@ -30,14 +30,14 @@ namespace TinyneProject.Services
         private StorageData LoadDataDirectly()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(StorageData));
-            using (var reader=File.Open(PATH,FileMode.OpenOrCreate))
+            using (var reader = File.Open(PATH, FileMode.OpenOrCreate))
             {
                 StorageData data;
                 try
-                { 
-                    data=(StorageData)serializer.Deserialize(reader);
+                {
+                    data = (StorageData)serializer.Deserialize(reader);
                 }
-                catch 
+                catch
                 {
                     data = new StorageData();
                 }
@@ -51,16 +51,13 @@ namespace TinyneProject.Services
             SaveDataDirectly(data);
         }
 
-        private async void SaveDataDirectly(StorageData data)
+        private void SaveDataDirectly(StorageData data)
         {
-            await Task.Run(() =>
+            XmlSerializer serializer = new XmlSerializer(typeof(StorageData));
+            using (var reader = File.Open(PATH, FileMode.Open))
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(StorageData));
-                using (var reader = File.Open(PATH, FileMode.OpenOrCreate))
-                {
-                    serializer.Serialize(reader, data);
-                }
-            });
+                serializer.Serialize(reader, data);
+            }
         }
     }
 }

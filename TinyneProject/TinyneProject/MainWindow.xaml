@@ -35,15 +35,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
-        
-        
-        <ListBox Style="{DynamicResource TListBoxStyle}"
+
+        <Border Background="{Binding brush}"/>
+        <!--<ListBox Style="{DynamicResource TListBoxStyle}"
                  Panel.ZIndex="1"
                  Grid.Column="0" Grid.ColumnSpan="2"
                  Grid.Row="0" Grid.RowSpan="2"
                  ItemsSource="{Binding currentData.Notes,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
             
-        </ListBox>
+        </ListBox>-->
 
 
         <Button Style="{DynamicResource AddNoteButtonStyle}" 

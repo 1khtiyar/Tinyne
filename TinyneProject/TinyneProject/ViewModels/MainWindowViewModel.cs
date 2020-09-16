@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using TinyneProject.Models;
 using TinyneProject.Services;
 
@@ -27,6 +28,7 @@ namespace TinyneProject.ViewModels
         }
 
 
+        public SolidColorBrush brush;
 
         private StorageIOService iOService;
 
@@ -64,6 +66,8 @@ namespace TinyneProject.ViewModels
 
             currentData = iOService.Load();
             this.Notes = currentData.Notes;
+
+            brush = (SolidColorBrush)Application.Current.FindResource("YellowBackgroundBrush");
 
             #region Commands initializing
 
