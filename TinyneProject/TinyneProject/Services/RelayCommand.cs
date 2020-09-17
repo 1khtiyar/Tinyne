@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace TinyneProject.Services
 {
-    internal class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         public Action action;
 

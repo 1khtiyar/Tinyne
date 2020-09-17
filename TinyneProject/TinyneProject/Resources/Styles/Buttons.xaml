@@ -114,7 +114,6 @@
                     <Border Name="BaseBorder" 
                             BorderBrush="Transparent" 
                             CornerRadius="5"
-                            Margin="5"
                             Opacity=".3"
                             Background="{DynamicResource WindowBackgroundBrush}">
                         <Rectangle Name="IconItself" 

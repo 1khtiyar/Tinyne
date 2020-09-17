@@ -10,7 +10,7 @@ using TinyneProject.Models;
 
 namespace TinyneProject.Services
 {
-    internal class StorageIOService
+    public class StorageIOService
     {
         readonly string PATH;
         const string Extension = "tdsf";

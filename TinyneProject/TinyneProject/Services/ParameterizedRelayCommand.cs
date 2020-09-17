@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace TinyneProject.Services
 {
-    internal class ParameterizedRelayCommand:ICommand
+    public class ParameterizedRelayCommand:ICommand
     {
         public Action<object> action;
 

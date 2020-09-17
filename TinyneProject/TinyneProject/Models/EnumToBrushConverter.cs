@@ -14,7 +14,6 @@ namespace TinyneProject.Models
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            MessageBox.Show(value.ToString());
             return NoteManager.SetBrush((NoteManager.BackgroundBrushes)value);
         }
 

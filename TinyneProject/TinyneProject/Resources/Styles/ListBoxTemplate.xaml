@@ -35,7 +35,6 @@
                 <ControlTemplate TargetType="ListBoxItem">
                     <Border>
                         <Grid>
-                            <!--{Binding Path=DataContext.Background,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=ListBoxItem},Converter={StaticResource EnumToBrushConverter}}-->
                             <Border Name="ListBoxItemContainer"
                                     Background="Gray"
                                     CornerRadius="5"
@@ -109,7 +108,8 @@
     <DataTemplate x:Key="TDataTemplate">
         <Grid VerticalAlignment="Center" 
               SnapsToDevicePixels="True"
-              Height="62">
+              Height="62"
+              Background="{Binding Path=Background,Converter={StaticResource EnumToBrushConverter}}">
             <TextBlock  Style="{DynamicResource ListBoxItemsDescriptionBoxStyle}"
                         Text="{Binding Path=Description}" 
                         Margin="3 5 3 3"
