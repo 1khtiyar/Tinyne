@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Dialogs\AddNoteWindowDialog.xaml.cs">
+      <DependentUpon>AddNoteWindowDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BackgroundSelectorWindowDialog.xaml.cs">
+      <DependentUpon>BackgroundSelectorWindowDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\EnumToBrushConverter.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\NoteManager.cs" />
@@ -65,6 +71,14 @@
     <Compile Include="Services\StorageIOService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Page Include="Dialogs\AddNoteWindowDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\BackgroundSelectorWindowDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -134,7 +148,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dialogs\" />
     <Folder Include="Resources\Images\" />
     <Folder Include="Views\" />
   </ItemGroup>

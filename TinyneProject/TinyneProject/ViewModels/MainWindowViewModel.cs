@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+using TinyneProject.Dialogs;
 using TinyneProject.Models;
 using TinyneProject.Services;
 
@@ -95,7 +96,17 @@ namespace TinyneProject.ViewModels
 
         private void AddNoteClick()
         {
-            currentData.Notes.Add(new Note());
+            AddNoteWindowDialog windowDialog = new AddNoteWindowDialog();
+            windowDialog.Show();
+
+            if (windowDialog.DialogResult == true)
+            {
+                currentData.Notes.Add(new Note()
+                {
+                    Background = windowDialog.UpdatedBackground,
+                    Description = windowDialog.UpdatedDescription
+                });
+            }
         }
 
         private void LogoWindowClick()
