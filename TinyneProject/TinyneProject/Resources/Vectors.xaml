@@ -71,8 +71,8 @@
         </Setter>
     </Style>
 
-    <!--<Style x:Key="ListBoxItemEditImage" TargetType="Rectangle">
-        <Setter Property="Fill" Value="{DynamicResource ToolBarButtonImageBrush}"/>
+    <Style x:Key="EditNoteImage" TargetType="Rectangle">
+        <Setter Property="Fill" Value="{DynamicResource WhiteBrush1Opac}"/>
         <Setter Property="OpacityMask">
             <Setter.Value>
                 <VisualBrush
@@ -83,8 +83,8 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ListBoxItemDeleteImage" TargetType="Rectangle">
-        <Setter Property="Fill" Value="{DynamicResource ToolBarButtonImageBrush}"/>
+    <Style x:Key="DeleteNoteImage" TargetType="Rectangle">
+        <Setter Property="Fill" Value="{DynamicResource WhiteBrush1Opac}"/>
         <Setter Property="OpacityMask">
             <Setter.Value>
                 <VisualBrush
@@ -93,7 +93,7 @@
                     />
             </Setter.Value>
         </Setter>
-    </Style>-->
+    </Style>
 
     <Style x:Key="AddNoteImage" TargetType="Rectangle">
         <Setter Property="Fill" Value="{DynamicResource WindowButtonForeBrush}"/>

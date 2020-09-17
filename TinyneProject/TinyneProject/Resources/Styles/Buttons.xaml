@@ -118,7 +118,7 @@
                             Background="{DynamicResource WindowBackgroundBrush}">
                         <Rectangle Name="IconItself" 
                                        Style="{DynamicResource AddNoteImage}" 
-                                       Height="25px" Width="{Binding Path=Height,RelativeSource={RelativeSource Mode=Self}}"
+                                       Height="22px" Width="{Binding Path=Height,RelativeSource={RelativeSource Mode=Self}}"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"/>
                     </Border>
@@ -135,6 +135,59 @@
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
 
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="EditNoteButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Border" 
+                            ClipToBounds="True" 
+                            BorderThickness="0"
+                            Background="{DynamicResource WhiteBrush1Opac}"
+                            Padding="9">
+                        <Rectangle x:Name="IconItself" Style="{DynamicResource EditNoteImage}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource WhiteBrush3Opac}" TargetName="Border"/>
+                            <Setter Property="Fill" Value="{DynamicResource WhiteBrush5Opac}" TargetName="IconItself"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource WhiteBrush5Opac}" TargetName="Border"/>
+                            <Setter Property="Fill" Value="{DynamicResource WhiteBrush9Opac}" TargetName="IconItself"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DeleteNoteButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Border" 
+                            ClipToBounds="True" 
+                            BorderThickness="0"
+                            Background="{DynamicResource WhiteBrush1Opac}"
+                            Padding="9">
+                        <Rectangle x:Name="IconItself" Style="{DynamicResource DeleteNoteImage}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource WhiteBrush3Opac}" TargetName="Border"/>
+                            <Setter Property="Fill" Value="{DynamicResource WhiteBrush5Opac}" TargetName="IconItself"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource WhiteBrush5Opac}" TargetName="Border"/>
+                            <Setter Property="Fill" Value="{DynamicResource WhiteBrush9Opac}" TargetName="IconItself"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>

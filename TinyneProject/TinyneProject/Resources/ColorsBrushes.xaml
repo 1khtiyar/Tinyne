@@ -5,9 +5,11 @@
     <!--#region White zone-->
 
     <SolidColorBrush x:Key="WhiteBrush" Color="White"/>
-    <SolidColorBrush x:Key="WhiteBrushLowOpac" Color="White" Opacity=".2"/>
-    <SolidColorBrush x:Key="WhiteBrushMidOpac" Color="White" Opacity=".5"/>
-    <SolidColorBrush x:Key="WhiteBrushHighOpac" Color="White" Opacity=".8"/>
+    <SolidColorBrush x:Key="WhiteBrush1Opac" Color="White" Opacity=".1"/>
+    <SolidColorBrush x:Key="WhiteBrush3Opac" Color="White" Opacity=".3"/>
+    <SolidColorBrush x:Key="WhiteBrush5Opac" Color="White" Opacity=".5"/>
+    <SolidColorBrush x:Key="WhiteBrush7Opac" Color="White" Opacity=".7"/>
+    <SolidColorBrush x:Key="WhiteBrush9Opac" Color="White" Opacity=".9"/>
 
     <!--#endregion-->
     

@@ -54,8 +54,8 @@ namespace TinyneProject.ViewModels
         public RelayCommand LogoWindowCommand { get; set; }
 
         public RelayCommand AddNoteCommand { get; set; }
-        public RelayCommand DeleteNoteCommand { get; set; }
-        public RelayCommand EditNoteCommand { get; set; }
+        public ParameterizedRelayCommand DeleteNoteCommand { get; set; }
+        public ParameterizedRelayCommand EditNoteCommand { get; set; }
 
         #endregion
 
@@ -77,20 +77,20 @@ namespace TinyneProject.ViewModels
             LogoWindowCommand= new RelayCommand(LogoWindowClick);
 
             AddNoteCommand= new RelayCommand(AddNoteClick);
-            DeleteNoteCommand= new RelayCommand(DeleteNoteClick);
-            EditNoteCommand= new RelayCommand(EditNoteClick);
+            DeleteNoteCommand= new ParameterizedRelayCommand(DeleteNoteClick);
+            EditNoteCommand= new ParameterizedRelayCommand(EditNoteClick);
 
             #endregion
         }
 
-        private void EditNoteClick()
+        private void EditNoteClick(object note)
         {
-            MessageBox.Show("Test");
+            MessageBox.Show((note as Note).Description);
         }
 
-        private void DeleteNoteClick()
+        private void DeleteNoteClick(object note)
         {
-            MessageBox.Show("Test");
+            currentData.Notes.Remove(note as Note);
         }
 
         private void AddNoteClick()

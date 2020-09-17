@@ -24,7 +24,7 @@
     </Style>
 
     <Style x:Key="TItemContainerStyle" TargetType="ListBoxItem" x:Name="asd">
-        <Setter Property="Height" Value="62px"/>
+        <Setter Property="Height" Value="65px"/>
         <Setter Property="Margin" Value="6 6 3 3"/>
         <Setter Property="SnapsToDevicePixels" Value="true"/>
         <Setter Property="OverridesDefaultStyle" Value="true"/>
@@ -60,18 +60,37 @@
                                 <Grid.OpacityMask>
                                     <VisualBrush Visual="{Binding ElementName=ListBoxItemContainer}"/>
                                 </Grid.OpacityMask>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border Background="{Binding Path=DataContext.Background,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=ListBoxItem},Converter={StaticResource EnumToBrushConverter}}"
+                                        Grid.ColumnSpan="2"
+                                        Grid.RowSpan="2"
+                                        Panel.ZIndex="1"/>
 
 
-                                <Border ClipToBounds="True" 
-                                        CornerRadius="5" 
-                                        BorderThickness="0">
+                                <Button Grid.Column="1" Grid.Row="0"
+                                        Panel.ZIndex="2"
+                                        Style="{DynamicResource EditNoteButtonStyle}"
+                                        Command="{Binding Path=DataContext.EditNoteCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=ListBox}}"
+                                        CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=Self}}"/>
 
-                                    <Grid ClipToBounds="True">
+                                <Button Grid.Column="1" Grid.Row="1"
+                                        Panel.ZIndex="2"
+                                        Style="{DynamicResource DeleteNoteButtonStyle}"
+                                        Command="{Binding Path=DataContext.DeleteNoteCommand,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=ListBox}}"
+                                        CommandParameter="{Binding Path=DataContext, RelativeSource={RelativeSource Mode=Self}}"/>
 
-                                        <ContentPresenter />
 
-                                    </Grid>
-                                </Border>
+                                <ContentPresenter Grid.Column="0" Grid.RowSpan="2" 
+                                                  Panel.ZIndex="2"/>
+                                
                             </Grid>
                         </Grid>
                     </Border>
@@ -108,13 +127,12 @@
     <DataTemplate x:Key="TDataTemplate">
         <Grid VerticalAlignment="Center" 
               SnapsToDevicePixels="True"
-              Height="62"
-              Background="{Binding Path=Background,Converter={StaticResource EnumToBrushConverter}}">
+              Height="65">
             <TextBlock  Style="{DynamicResource ListBoxItemsDescriptionBoxStyle}"
                         Text="{Binding Path=Description}" 
                         Margin="3 5 3 3"
                         VerticalAlignment="Center"
-                        Height="62"
+                        Height="65"
                         TextTrimming="CharacterEllipsis"
                         TextWrapping="Wrap"/>
         </Grid>
