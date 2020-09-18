@@ -9,9 +9,11 @@ namespace TinyneProject.Dialogs
     {
         public NoteManager.BackgroundBrushes SelectedBackground;
 
-        public BackgroundSelectorWindowDialog()
+        public BackgroundSelectorWindowDialog(Window window)
         {
             InitializeComponent();
+
+            this.Owner = window;
 
             SelectedBackground = NoteManager.BackgroundBrushes.Default;
 
@@ -47,8 +49,10 @@ namespace TinyneProject.Dialogs
 
             foreach (Button item in MainPanel.Children)
             {
-                item.Height = 50;
-                item.Width = 50;
+                item.Height = 45;
+                item.Width = 45;
+                item.Margin = new Thickness(2);
+                item.Style = (Style)Application.Current.FindResource("BackgroundSelectorButtonStyle");
                 item.Click += SelectBackground;
             }
         }

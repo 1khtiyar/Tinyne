@@ -7,46 +7,62 @@
         mc:Ignorable="d"
         Title="AddNoteWindowDialog" 
         
-        Height="450" Width="350"
+        Height="350" Width="320"
         
+        Style="{DynamicResource TDialogStyle}"
         ResizeMode="NoResize"
-        WindowStyle="None">
+        WindowStyle="None"
+        AllowsTransparency="True"
+        
+        WindowStartupLocation="CenterOwner">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0"
+                      CornerRadius="5"
+                      GlassFrameThickness="0"/>
+    </WindowChrome.WindowChrome>
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
         <TextBox x:Name="NoteDescriptionBox"
                  TextWrapping="Wrap"
+                 Margin="3 3 3 0"
                  MaxWidth="{Binding Path=ActualWidth,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
-                 MaxHeight="{Binding Path=ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"/>
+                 MaxHeight="{Binding Path=ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                 Style="{DynamicResource DialogTextBoxStyle}"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="80"/>
             </Grid.ColumnDefinitions>
 
 
-            <Button x:Name="BackgroundButton"
-                    Content="Background"
-                    Click="BackgroundButton_Click"/>
+            <Button x:Name="BackgroundButton" Click="BackgroundButton_Click" Style="{DynamicResource BackgroundSelectorButtonStyle}" Margin="3"/>
 
 
             <Button x:Name="AddNoteButton" 
                     IsDefault="True"
                     Grid.Column="2"
                     Content="Add"
-                    Click="AddNoteButton_Click"/>
+                    Click="AddNoteButton_Click" 
+                    Style="{DynamicResource PositiveDialogButtonStyle}"
+                    Margin="3"/>
 
             <Button x:Name="CancelButton" 
                     IsCancel="True"
                     Content="Cancel"
                     Grid.Column="3"
-                    Click="CancelButton_Click"/>
+                    Click="CancelButton_Click"
+                    Style="{DynamicResource NegativeDialogButtonStyle}"
+                    Margin="3"/>
 
         </Grid>
     </Grid>

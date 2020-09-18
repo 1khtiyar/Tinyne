@@ -9,9 +9,11 @@ namespace TinyneProject.Dialogs
         public string NewNoteDescription { get; set; }
         public NoteManager.BackgroundBrushes NewNoteBackground { get; set; }
 
-        public AddNoteWindowDialog()
+        public AddNoteWindowDialog(Window window)
         {
             InitializeComponent();
+
+            this.Owner = window;
 
             NewNoteDescription = string.Empty;
             NewNoteBackground = NoteManager.BackgroundBrushes.Default;
@@ -33,7 +35,7 @@ namespace TinyneProject.Dialogs
 
         private void BackgroundButton_Click(object sender, RoutedEventArgs e)
         {
-            BackgroundSelectorWindowDialog windowDialog = new BackgroundSelectorWindowDialog();
+            BackgroundSelectorWindowDialog windowDialog = new BackgroundSelectorWindowDialog(this);
 
             if (windowDialog.ShowDialog()==true)
             {

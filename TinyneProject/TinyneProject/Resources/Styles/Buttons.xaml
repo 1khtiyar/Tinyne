@@ -123,14 +123,57 @@
                                        VerticalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Duration="0:0:.2" 
+                                                     Storyboard.TargetName="BaseBorder" 
+                                                     Storyboard.TargetProperty="Opacity" 
+                                                     To="1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
 
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" Value="1" TargetName="BaseBorder"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
+                        <EventTrigger RoutedEvent="MouseLeave">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Duration="0:0:.2" 
+                                                     Storyboard.TargetName="BaseBorder" 
+                                                     Storyboard.TargetProperty="Opacity" 
+                                                     To=".3"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <EventTrigger RoutedEvent="Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Duration="0:0:.2" 
+                                                     AutoReverse="True"
+                                                     To="1"
+                                                     Storyboard.TargetName="BaseBorder" 
+                                                     Storyboard.TargetProperty="Opacity" 
+                                                     />
+                                    <ColorAnimation Duration="0:0:.2"
+                                                    AutoReverse="True"
+                                                    To="{StaticResource WindowButtonHoverBackColor}"
+                                                    Storyboard.TargetName="BaseBorder"
+                                                    Storyboard.TargetProperty="Background.Color"
+                                                    />
+                                    <ColorAnimation Duration="0:0:.2"
+                                                    AutoReverse="True"
+                                                    To="{StaticResource WindowButtonHoverForeColor}"
+                                                    Storyboard.TargetName="IconItself"
+                                                    Storyboard.TargetProperty="Fill.Color"
+                                                    />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                        <!--<Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="BaseBorder" Property="Background" Value="{DynamicResource WindowButtonHoverBackBrush}"/>
                             <Setter TargetName="IconItself" Property="Fill" Value="{DynamicResource WindowButtonHoverForeBrush}"/>
-                        </Trigger>
+                        </Trigger>-->
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -186,6 +229,97 @@
                             <Setter Property="Background" Value="{DynamicResource WhiteBrush5Opac}" TargetName="Border"/>
                             <Setter Property="Fill" Value="{DynamicResource WhiteBrush9Opac}" TargetName="IconItself"/>
                         </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="BackgroundSelectorButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderThickness="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="5">
+                        
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="PositiveDialogButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="FontFamily" Value="{StaticResource MainFont}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="Foreground" Value="{DynamicResource PositiveButtonForeBrush}"/>
+        
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderThickness="0" Background="{DynamicResource PositiveButtonBackgroundBrush}" SnapsToDevicePixels="true" CornerRadius="5">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource PositiveButtonPressedBackgroundBrush}" TargetName="border"/>
+                        </Trigger>
+                        
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <Style x:Key="NegativeDialogButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="FontFamily" Value="{StaticResource MainFont}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="Foreground" Value="{DynamicResource NegativeButtonForeBrush}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderThickness="0" Background="{DynamicResource NegativeButtonBackgroundBrush}" SnapsToDevicePixels="true" CornerRadius="5">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource NegativeButtonPressedBackgroundBrush}" TargetName="border"/>
+                        </Trigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

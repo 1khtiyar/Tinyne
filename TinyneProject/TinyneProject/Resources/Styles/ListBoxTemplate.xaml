@@ -131,7 +131,7 @@
             <TextBlock  Style="{DynamicResource ListBoxItemsDescriptionBoxStyle}"
                         Text="{Binding Path=Description}" 
                         Margin="5 5 3 3"
-                        VerticalAlignment="Center"
+                        VerticalAlignment="Stretch"
                         Height="65"
                         TextTrimming="CharacterEllipsis"
                         TextWrapping="Wrap"
@@ -140,4 +140,15 @@
         </Grid>
     </DataTemplate>
 
+    <Style x:Key="ListBoxItemsDescriptionBoxStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="AllowDrop" Value="true"/>
+
+        <Setter Property="FontFamily" Value="{StaticResource MainFont}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="{DynamicResource WhiteBrush9Opac}"/>
+    </Style>
+    
 </ResourceDictionary>

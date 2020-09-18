@@ -89,4 +89,48 @@
         </Style.Triggers>
     </Style>
 
+
+    <Style x:Key="TDialogStyle" TargetType="{x:Type Window}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Window}">
+                    <Border Padding="5">
+                        <Grid>
+                            <Border CornerRadius="5"
+                                Background="{DynamicResource DialogBackgroundBrush}"
+                                x:Name="Container"/>
+
+                            <Border CornerRadius="5"
+                                Background="{DynamicResource DialogBackgroundBrush}"
+                                x:Name="ShadowBorder">
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="8"
+                                                        ShadowDepth="1"
+                                                        Direction="270"
+                                                        Opacity=".3"
+                                                        RenderingBias="Performance"/>
+                                </Border.Effect>
+                            </Border>
+
+                            <Grid>
+                                <Grid.OpacityMask>
+                                    <VisualBrush Visual="{Binding ElementName=Container}"/>
+                                </Grid.OpacityMask>
+
+                                <ContentControl Content="{TemplateBinding Content}"/>
+
+                            </Grid>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

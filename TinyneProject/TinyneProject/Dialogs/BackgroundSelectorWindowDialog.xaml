@@ -7,13 +7,23 @@
         mc:Ignorable="d"
         Title="BackgroundSelectorWindowDialog" 
         
-        Height="100" Width="200"
+        Height="108" Width="212"
         ResizeMode="NoResize"
-        WindowStyle="None">
+        WindowStyle="None"
+        
+        WindowStartupLocation="CenterOwner"
+        
+        Style="{DynamicResource TDialogStyle}">
 
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0"
+                      CornerRadius="5"
+                      GlassFrameThickness="0"/>
+    </WindowChrome.WindowChrome>
+    
     <WrapPanel x:Name="MainPanel"
-               Height="100" Width="200"
                HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
+               VerticalAlignment="Center"
+               Margin="3"/>
 
 </Window>

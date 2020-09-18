@@ -35,7 +35,10 @@
     
     <Color x:Key="WindowBackgroundColor">#D6D6D6</Color>
     <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{DynamicResource WindowBackgroundColor}"/>
-    
+
+    <Color x:Key="DialogBackgroundColor">#ABABAB</Color>
+    <SolidColorBrush x:Key="DialogBackgroundBrush" Color="{DynamicResource DialogBackgroundColor}"/>
+
 
 
     <!--#region Window Buttons -->
@@ -79,6 +82,37 @@
 
     <Color x:Key="ListBoxBackgroundColor">#ABABAB</Color>
     <SolidColorBrush x:Key="ListBoxBackgroundBrush" Color="{DynamicResource ListBoxBackgroundColor}"/>
+
+
     
+    <Color x:Key="PositiveButtonBackgroundColor">#BCBCBC</Color>
+    <SolidColorBrush x:Key="PositiveButtonBackgroundBrush" Color="{DynamicResource PositiveButtonBackgroundColor}"/>
+
+    <Color x:Key="PositiveButtonPressedBackgroundColor">#D6D6D6</Color>
+    <SolidColorBrush x:Key="PositiveButtonPressedBackgroundBrush" Color="{DynamicResource PositiveButtonPressedBackgroundColor}"/>
+
+
+    <Color x:Key="PositiveButtonForeColor">#7F7F7F</Color>
+    <SolidColorBrush x:Key="PositiveButtonForeBrush" Color="{DynamicResource PositiveButtonForeColor}"/>
+
+    <Color x:Key="PositiveButtonPressedForeColor">#555555</Color>
+    <SolidColorBrush x:Key="PositiveButtonPressedForeBrush" Color="{DynamicResource PositiveButtonPressedForeColor}"/>
+
+
+
+
+    <Color x:Key="NegativeButtonBackgroundColor">#7F7F7F</Color>
+    <SolidColorBrush x:Key="NegativeButtonBackgroundBrush" Color="{DynamicResource NegativeButtonBackgroundColor}"/>
+
+    <Color x:Key="NegativeButtonPressedBackgroundColor">#555555</Color>
+    <SolidColorBrush x:Key="NegativeButtonPressedBackgroundBrush" Color="{DynamicResource NegativeButtonPressedBackgroundColor}"/>
+
+
+    <Color x:Key="NegativeButtonForeColor">#D6D6D6</Color>
+    <SolidColorBrush x:Key="NegativeButtonForeBrush" Color="{DynamicResource NegativeButtonForeColor}"/>
+
+    <Color x:Key="NegativeButtonPressedForeColor">#F8F8F8</Color>
+    <SolidColorBrush x:Key="NegativeButtonPressedForeBrush" Color="{DynamicResource NegativeButtonPressedForeColor}"/>
+
 
 </ResourceDictionary>

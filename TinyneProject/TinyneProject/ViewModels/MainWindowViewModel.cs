@@ -86,7 +86,7 @@ namespace TinyneProject.ViewModels
 
         private void EditNoteClick(object note)
         {
-            EditNoteWindowDialog windowDialog = new EditNoteWindowDialog(note as Note);
+            EditNoteWindowDialog windowDialog = new EditNoteWindowDialog(note as Note,window);
 
             if (windowDialog.ShowDialog() == true)
             {
@@ -102,7 +102,7 @@ namespace TinyneProject.ViewModels
 
         private void AddNoteClick()
         {
-            AddNoteWindowDialog windowDialog = new AddNoteWindowDialog();
+            AddNoteWindowDialog windowDialog = new AddNoteWindowDialog(window);
 
             if (windowDialog.ShowDialog() == true)
             {
