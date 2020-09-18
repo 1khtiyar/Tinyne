@@ -86,7 +86,13 @@ namespace TinyneProject.ViewModels
 
         private void EditNoteClick(object note)
         {
-            MessageBox.Show((note as Note).Description);
+            EditNoteWindowDialog windowDialog = new EditNoteWindowDialog(note as Note);
+
+            if (windowDialog.ShowDialog() == true)
+            {
+                (note as Note).Background = windowDialog.CurrentNoteBackground;
+                (note as Note).Description = windowDialog.CurrentNoteDescription;
+            }
         }
 
         private void DeleteNoteClick(object note)
@@ -97,14 +103,13 @@ namespace TinyneProject.ViewModels
         private void AddNoteClick()
         {
             AddNoteWindowDialog windowDialog = new AddNoteWindowDialog();
-            windowDialog.Show();
 
-            if (windowDialog.DialogResult == true)
+            if (windowDialog.ShowDialog() == true)
             {
                 currentData.Notes.Add(new Note()
                 {
-                    Background = windowDialog.UpdatedBackground,
-                    Description = windowDialog.UpdatedDescription
+                    Background = windowDialog.NewNoteBackground,
+                    Description = windowDialog.NewNoteDescription
                 });
             }
         }

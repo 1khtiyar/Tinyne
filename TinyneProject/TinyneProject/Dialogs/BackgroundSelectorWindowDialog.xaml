@@ -9,9 +9,11 @@
         
         Height="100" Width="200"
         ResizeMode="NoResize"
-        WindowStyle="ToolWindow"
-        >
-    <DockPanel x:Name="MainPanel">
-        
-    </DockPanel>
+        WindowStyle="None">
+
+    <WrapPanel x:Name="MainPanel"
+               Height="100" Width="200"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+
 </Window>

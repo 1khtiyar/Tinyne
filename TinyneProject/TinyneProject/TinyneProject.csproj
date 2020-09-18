@@ -61,6 +61,9 @@
     <Compile Include="Dialogs\BackgroundSelectorWindowDialog.xaml.cs">
       <DependentUpon>BackgroundSelectorWindowDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\EditNoteWindowDialog.xaml.cs">
+      <DependentUpon>EditNoteWindowDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\EnumToBrushConverter.cs" />
     <Compile Include="Models\Note.cs" />
     <Compile Include="Models\NoteManager.cs" />
@@ -76,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\BackgroundSelectorWindowDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\EditNoteWindowDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

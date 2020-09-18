@@ -130,11 +130,13 @@
               Height="65">
             <TextBlock  Style="{DynamicResource ListBoxItemsDescriptionBoxStyle}"
                         Text="{Binding Path=Description}" 
-                        Margin="3 5 3 3"
+                        Margin="5 5 3 3"
                         VerticalAlignment="Center"
                         Height="65"
                         TextTrimming="CharacterEllipsis"
-                        TextWrapping="Wrap"/>
+                        TextWrapping="Wrap"
+                        MaxWidth="220"
+                        HorizontalAlignment="Left"/>
         </Grid>
     </DataTemplate>
 
