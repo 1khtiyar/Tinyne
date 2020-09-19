@@ -21,7 +21,7 @@
     <WindowChrome.WindowChrome>
         <WindowChrome NonClientFrameEdges="None"
                       GlassFrameThickness="0"
-                      ResizeBorderThickness="7"
+                      ResizeBorderThickness="4"
                       CaptionHeight="30"
                       CornerRadius="0"/>
     </WindowChrome.WindowChrome>

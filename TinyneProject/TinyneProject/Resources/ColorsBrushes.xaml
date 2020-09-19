@@ -114,5 +114,18 @@
     <Color x:Key="NegativeButtonPressedForeColor">#F8F8F8</Color>
     <SolidColorBrush x:Key="NegativeButtonPressedForeBrush" Color="{DynamicResource NegativeButtonPressedForeColor}"/>
 
+    
+    
+    <Color  x:Key="ThumbBackgroundColor">#D6D6D6</Color>
+    <SolidColorBrush x:Key="ThumbBackgroundBrush" Color="{DynamicResource ThumbBackgroundColor}"/>
+
+
+
+    <Color  x:Key="HeadLineForegroundColor">#7F7F7F</Color>
+    <SolidColorBrush x:Key="HeadLineForegroundBrush" Color="{DynamicResource HeadLineForegroundColor}"/>
+
+    <Color  x:Key="TextForegroundColor">#F8F8F8</Color>
+    <SolidColorBrush x:Key="TextForegroundBrush" Color="{DynamicResource TextForegroundColor}"/>
+
 
 </ResourceDictionary>

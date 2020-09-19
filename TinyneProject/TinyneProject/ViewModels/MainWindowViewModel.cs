@@ -9,6 +9,7 @@ using System.Windows.Media;
 using TinyneProject.Dialogs;
 using TinyneProject.Models;
 using TinyneProject.Services;
+using TinyneProject.Views;
 
 namespace TinyneProject.ViewModels
 {
@@ -116,7 +117,10 @@ namespace TinyneProject.ViewModels
 
         private void LogoWindowClick()
         {
-            MessageBox.Show("Test");
+            AboutWindow aboutWindow = new AboutWindow();
+
+            if (aboutWindow.ShowDialog() == true)
+                return;
         }
 
         private void TopMostWindowClick()

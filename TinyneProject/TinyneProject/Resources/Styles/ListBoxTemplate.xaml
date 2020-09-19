@@ -14,7 +14,8 @@
                             BorderBrush="Transparent">
                         <ScrollViewer Style="{DynamicResource TScrollViewerStyle}"
                                       CanContentScroll="False"
-                                      VerticalScrollBarVisibility="Auto">
+                                      VerticalScrollBarVisibility="Auto"
+                                      HorizontalScrollBarVisibility="Hidden">
                             <StackPanel IsItemsHost="True"/>
                         </ScrollViewer>
                     </Border>

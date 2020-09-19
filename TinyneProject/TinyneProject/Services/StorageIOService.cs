@@ -54,7 +54,9 @@ namespace TinyneProject.Services
         private void SaveDataDirectly(StorageData data)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(StorageData));
-            using (var reader = File.Open(PATH, FileMode.Open))
+            File.Delete(PATH);
+
+            using (var reader = File.Open(PATH, FileMode.OpenOrCreate))
             {
                 serializer.Serialize(reader, data);
             }
