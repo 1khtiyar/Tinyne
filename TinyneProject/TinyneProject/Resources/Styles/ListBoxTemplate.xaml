@@ -12,11 +12,11 @@
                 <ControlTemplate TargetType="ListBox">
                     <Border Background="{DynamicResource ListBoxBackgroundBrush}"
                             BorderBrush="Transparent">
-                        <ScrollViewer Style="{DynamicResource TScrollViewerStyle}"
-                                      CanContentScroll="False"
-                                      VerticalScrollBarVisibility="Auto"
-                                      HorizontalScrollBarVisibility="Hidden">
-                            <StackPanel IsItemsHost="True"/>
+                        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" Style="{DynamicResource TestScrollViewer}" CanContentScroll="False">
+                            <StackPanel>
+                                <StackPanel IsItemsHost="True"/>
+                                <Label Height="60"/>
+                            </StackPanel>
                         </ScrollViewer>
                     </Border>
                 </ControlTemplate>
