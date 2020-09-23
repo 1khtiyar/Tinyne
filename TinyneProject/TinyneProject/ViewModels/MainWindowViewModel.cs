@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Media;
 
 using TinyneProject.Dialogs;
@@ -59,7 +60,7 @@ namespace TinyneProject.ViewModels
         }
 
         /// <summary>
-        /// Temp variable to have a reference of a main window
+        /// Temp member (a reference to the main window)
         /// </summary>
         private readonly Window window;
 
@@ -91,31 +92,31 @@ namespace TinyneProject.ViewModels
 
             #region Commands initializing
 
-            CloseWindowCommand = new RelayCommand(CloseWindowClick);
-            MinimizeWindowCommand = new RelayCommand(MinimizeWindowClick);
-            TopMostWindowCommand = new RelayCommand(TopMostWindowClick);
-            LogoWindowCommand = new RelayCommand(LogoWindowClick);
+            CloseWindowCommand = new RelayCommand(CloseWindow);
+            MinimizeWindowCommand = new RelayCommand(MinimizeWindow);
+            TopMostWindowCommand = new RelayCommand(PutWindowOnTopMost);
+            LogoWindowCommand = new RelayCommand(WindowLogoClick);
 
-            AddNoteCommand = new RelayCommand(AddNoteClick);
-            DeleteNoteCommand = new ParameterizedRelayCommand(DeleteNoteClick);
-            EditNoteCommand = new ParameterizedRelayCommand(EditNoteClick);
+            AddNoteCommand = new RelayCommand(AddNote);
+            DeleteNoteCommand = new ParameterizedRelayCommand(DeleteNote);
+            EditNoteCommand = new ParameterizedRelayCommand(EditNote);
 
             #endregion
         }
 
-        private void Window_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        private void Window_MouseEnter(object sender, MouseEventArgs e)
         {
             window.Opacity = 1D;
         }
 
-        private void Window_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        private void Window_MouseLeave(object sender, MouseEventArgs e)
         {
             if (!window.Topmost) return;
 
             window.Opacity = 0.2D;
         }
 
-        private void EditNoteClick(object note)
+        private void EditNote(object note)
         {
             EditNoteWindowDialog windowDialog = new EditNoteWindowDialog(note as Note, window);
 
@@ -126,12 +127,12 @@ namespace TinyneProject.ViewModels
             }
         }
 
-        private void DeleteNoteClick(object note)
+        private void DeleteNote(object note)
         {
             currentData.Notes.Remove(note as Note);
         }
 
-        private void AddNoteClick()
+        private void AddNote()
         {
             AddNoteWindowDialog windowDialog = new AddNoteWindowDialog(window);
 
@@ -145,7 +146,7 @@ namespace TinyneProject.ViewModels
             }
         }
 
-        private void LogoWindowClick()
+        private void WindowLogoClick()
         {
             AboutWindow aboutWindow = new AboutWindow();
             aboutWindow.Owner = window;
@@ -154,18 +155,18 @@ namespace TinyneProject.ViewModels
                 return;
         }
 
-        private void TopMostWindowClick()
+        private void PutWindowOnTopMost()
         {
             window.Topmost = !window.Topmost;
             OnTopButtonForegroundBrush = window.Topmost?(SolidColorBrush)Application.Current.FindResource("WhiteBrush7Opac"): (SolidColorBrush)Application.Current.FindResource("WindowButtonForeBrush");
         }
 
-        private void MinimizeWindowClick()
+        private void MinimizeWindow()
         {
             window.WindowState = WindowState.Minimized;
         }
 
-        private void CloseWindowClick()
+        private void CloseWindow()
         {
             iOService.Save(currentData);
             window.Close();

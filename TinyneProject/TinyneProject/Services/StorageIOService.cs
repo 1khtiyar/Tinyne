@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 using TinyneProject.Models;
@@ -12,9 +8,9 @@ namespace TinyneProject.Services
 {
     public class StorageIOService
     {
-        readonly string PATH;
-        const string Extension = "tdsf";
-        const string FileName = "data";
+        private readonly string PATH;
+        private const string Extension = "tdsf";
+        private const string FileName = "data";
 
         public StorageIOService()
         {

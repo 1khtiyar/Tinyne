@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Media;
 using static TinyneProject.Models.NoteManager;
 
 namespace TinyneProject.Models
@@ -39,7 +38,7 @@ namespace TinyneProject.Models
 
         public Note()
         {
-            Description = "...";
+            Description = " ";
             Background = BackgroundBrushes.Default;
         }
     }
