@@ -21,17 +21,6 @@ namespace TinyneProject.ViewModels
     /// </summary>
     internal class MainWindowViewModel : OnPropertyChangedClass
     {
-        private ObservableCollection<Note> notes;
-        public ObservableCollection<Note> Notes
-        {
-            get => notes;
-            set
-            {
-                notes = value;
-                OnPropertyChanged();
-            }
-        }
-
 
         private SolidColorBrush onTopButtonForegroundBrush;
         public SolidColorBrush OnTopButtonForegroundBrush
@@ -44,11 +33,16 @@ namespace TinyneProject.ViewModels
             }
         }
 
-
+        /// <summary>
+        /// Intermediate member for input/output operations with main storage file
+        /// </summary>
         private StorageIOService iOService;
 
 
         private StorageData currentStorageData;
+        /// <summary>
+        /// Created/changed data for the current application session
+        /// </summary>
         public StorageData currentData
         {
             get { return currentStorageData; }
@@ -83,7 +77,7 @@ namespace TinyneProject.ViewModels
             iOService = new StorageIOService();
 
             currentData = iOService.Load();
-            this.Notes = currentData.Notes;
+            //this.Notes = currentData.Notes;
 
             OnTopButtonForegroundBrush = (SolidColorBrush)Application.Current.FindResource("WindowButtonForeBrush");
 

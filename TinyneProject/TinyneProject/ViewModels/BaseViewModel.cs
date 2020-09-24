@@ -9,5 +9,6 @@ namespace TinyneProject.ViewModels
 {
     internal class BaseViewModel : OnPropertyChangedClass
     {
+
     }
 }

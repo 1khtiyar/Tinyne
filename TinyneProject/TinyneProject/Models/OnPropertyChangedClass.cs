@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 namespace TinyneProject.Models
 {
     /// <summary>
-    /// Implements <seealso cref="INotifyPropertyChanged"/>
+    /// Class with implemented <seealso cref="INotifyPropertyChanged"/> interface
     /// </summary>
     public class OnPropertyChangedClass : INotifyPropertyChanged
     {
