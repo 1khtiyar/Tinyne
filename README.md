@@ -1,5 +1,5 @@
 ![Tinyne background](https://github.com/1khtiyar/Tinyne/blob/master/Assets/TinyneReadmeBackground.png) 
-![GitHub](https://img.shields.io/github/license/1khtiyar/Tinyne?style=flat-square) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/1khtiyar/Tinyne?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/1khtiyar/Tinyne?color=red&style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/1khtiyar/Tinyne?color=yellow&style=flat-square) ![GitHub All Releases](https://img.shields.io/github/downloads/1khtiyar/TInyne/total?color=success&style=flat-square)  
+![GitHub](https://img.shields.io/github/license/1khtiyar/Tinyne?style=flat-square) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/1khtiyar/Tinyne?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/1khtiyar/Tinyne?color=red&style=flat-square) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/1khtiyar/Tinyne?color=yellow&style=flat-square) ![GitHub All Releases](https://img.shields.io/github/downloads/1khtiyar/TInyne/total?color=success&style=flat-square)  
 # Tinyne
   
 ## 📣 [Release v1.0.0 Stable](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0) 📣  
