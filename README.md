@@ -4,28 +4,30 @@
   
 ## 📣 [Release v1.0.0 Stable](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0) 📣  
 
-**Content**
+## Content
 - [About](#about)
 - [Setup](#setup)
-- [Contributing](#cotributing)
+- [Contributing](#contributing)
 - [Found a Bug?](#found-a-bug)
 - [Missing a Feature?](#missing-a-feature)
 - [License](#license)
-
-
-## About
-
+  
+  
+### About
+  
 Tinyne is a small desktop application for working with simple notes. With this application, you can instantly create primitive notes that will be safely stored on your computer. Pin Tinyne to your home screen, using *OnTopMost* button so that it is always at your hand.
-
-
-## Setup
+  
+  
+  
+### Setup
 
 You can **[download](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0)** the latest installable version of Tinyne for Windows only.
 Is the installer harmfull? Don't worry, the reason for this notification is that there is no signed certificate that I am currently working on.
-
-
-## Contributing
-
+  
+  
+  
+### Contributing
+  
 To fix a bug or add a new feature, follow these steps:
 
 1. Fork the repo
@@ -34,20 +36,25 @@ To fix a bug or add a new feature, follow these steps:
 4. Commit your changes (git commit -m 'Commit description')
 5. Push to the branch (git push origin feature-branch)
 6. Create a Pull Request
-
-
-## Found a Bug?
-
+  
+  
+  
+### Found a Bug?
+  
 If you find a bug in the source code, you can help me by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new) to my [GitHub Repository](https://github.com/1khtiyar/Tinyne). 
 Or even better, you can submit a Pull Request with a fix.
-
-
-## Missing a Feature?
-
+  
+  
+  
+### Missing a Feature?
+  
 You can **request** a new feature by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new). 
 If you would like to **implement** a new feature, please see [Contributing](#contributing).
-
-
-## License
-
+  
+  
+  
+### License
+  
 **[MIT License](https://github.com/1khtiyar/Tinyne/blob/v1.0.0/LICENSE)**
+  
+  
