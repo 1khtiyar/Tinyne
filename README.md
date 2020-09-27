@@ -8,8 +8,8 @@
 - [About](#about)
 - [Setup](#setup)
 - [Contributing](#cotributing)
-- [Found a Bug?](#foundabug?)
-- [Missing a Feature?](#missingafeature?)
+- [Found a Bug?](#found-a-bug)
+- [Missing a Feature?](#missing-a-feature)
 - [License](#license)
 
 
@@ -20,7 +20,7 @@ Tinyne is a small desktop application for working with simple notes. With this a
 
 ## Setup
 
-You can [download](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0) the latest installable version of Tinyne for Windows only.
+You can **[download](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0)** the latest installable version of Tinyne for Windows only.
 Is the installer harmfull? Don't worry, the reason for this notification is that there is no signed certificate that I am currently working on.
 
 
@@ -38,14 +38,14 @@ To fix a bug or add a new feature, follow these steps:
 
 ## Found a Bug?
 
-If you find a bug in the source code, you can help me by [submitting an issue]() to my [GitHub Repository](). 
-Or even better, you can [submit a Pull Request]() with a fix.
+If you find a bug in the source code, you can help me by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new) to my [GitHub Repository](https://github.com/1khtiyar/Tinyne). 
+Or even better, you can submit a Pull Request with a fix.
 
 
 ## Missing a Feature?
 
-You can **request** a new feature by [submitting an issue](#submit-issue). 
-If you would like to **implement** a new feature, please see [Contributing]().
+You can **request** a new feature by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new). 
+If you would like to **implement** a new feature, please see [Contributing](#contributing).
 
 
 ## License
