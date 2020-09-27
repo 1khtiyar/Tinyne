@@ -17,20 +17,20 @@
   
 ## About
   
-Tinyne is a small desktop application for working with simple notes. With this application, you can instantly create primitive notes that will be safely stored on your computer. Pin Tinyne to your home screen, using *OnTopMost* button so that it is always at your hand.
+Tinyne is a small desktop application for working with simple notes. With this application, you can instantly create primitive notes that will be safely stored on your computer. Pin Tinyne to your home screen, using *OnTopMost* button so that it is always at your hand.  
   
   
   
 ## Setup
 
-You can **[download](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0)** the latest installable version of Tinyne for Windows only.
-Is the installer harmfull? Don't worry, the reason for this notification is that there is no signed certificate that I am currently working on.
+You can **[download](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0)** the latest installable version of Tinyne for Windows only.  
+Is the installer harmfull? Don't worry, the reason for this notification is that there is no signed certificate that I am currently working on.  
   
   
   
 ## Contributing
   
-To fix a bug or add a new feature, follow these steps:
+To fix a bug or add a new feature, follow these steps:  
 
 1. Fork the repo
 2. Create a new branch (git checkout -b feature-branch)
@@ -43,26 +43,26 @@ To fix a bug or add a new feature, follow these steps:
   
 ## Found a Bug?
   
-If you find a bug in the source code, you can help me by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new) to my [GitHub Repository](https://github.com/1khtiyar/Tinyne). 
-Or even better, you can submit a Pull Request with a fix.
+If you find a bug in the source code, you can help me by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new) to my [GitHub Repository](https://github.com/1khtiyar/Tinyne).  
+Or even better, you can submit a Pull Request with a fix.  
   
   
   
 ## Missing a Feature?
   
-You can **request** a new feature by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new). 
-If you would like to **implement** a new feature, please see [Contributing](#contributing).
+You can **request** a new feature by [submitting an issue](https://github.com/1khtiyar/Tinyne/issues/new).  
+If you would like to **implement** a new feature, please see [Contributing](#contributing).  
   
   
   
 ## Built with
   
 #### Technologies:
-- **WPF** (Windows Presentation Foundation) - Analogous to WinForms, a system for building Windows client applications with visually appealing user experience, a graphics subsystem within the .NET Framework that uses XAML.
+- **WPF** (Windows Presentation Foundation) - Analogous to WinForms, a system for building Windows client applications with visually appealing user experience, a graphics subsystem within the .NET Framework that uses XAML.  
   
 #### Languages:
 - **C#** - Object-oriented programming language. Developed in 1998-2001 by a group of Microsoft engineers.
-- **XAML** - eXtensible Application Markup Language is an XML-based markup language for declarative application programming developed by Microsoft.
+- **XAML** - eXtensible Application Markup Language is an XML-based markup language for declarative application programming developed by Microsoft.  
   
 #### Tools:
 - **Visual Studio**
@@ -71,7 +71,7 @@ If you would like to **implement** a new feature, please see [Contributing](#con
   
 ## License
   
-**[MIT License](https://github.com/1khtiyar/Tinyne/blob/v1.0.0/LICENSE)** © [Ikhtiyar Novruzov](https://github.com/1khtiyar), [Tinyne](https://github.com/1khtiyar/Tinyne), 2020
+**[MIT License](https://github.com/1khtiyar/Tinyne/blob/v1.0.0/LICENSE)** © [Ikhtiyar Novruzov](https://github.com/1khtiyar), [Tinyne](https://github.com/1khtiyar/Tinyne), 2020  
   
   
 ## Resources used
