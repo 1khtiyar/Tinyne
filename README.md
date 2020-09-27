@@ -24,7 +24,7 @@ Tinyne is a small desktop application for working with simple notes. With this a
 ## Setup
 
 You can **[download](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0)** the latest installable version of Tinyne for Windows only.  
-Is the installer harmfull? Don't worry, the reason for this notification is that there is no signed certificate that I am currently working on.  
+If the installer was listed as malware, don't worry, the reason for this notification is that there is no signed certificate that I am currently working on.  
   
   
   
