@@ -1,13 +1,11 @@
 ﻿using System.Windows;
-
-using TinyneProject.Models;
+using System.Windows.Input;
 
 namespace TinyneProject.Dialogs
 {
     public partial class AddNoteWindowDialog : Window
     {
         public string NewNoteDescription { get; set; }
-        public NoteManager.BackgroundBrushes NewNoteBackground { get; set; }
 
         public AddNoteWindowDialog(Window window)
         {
@@ -16,10 +14,15 @@ namespace TinyneProject.Dialogs
             this.Owner = window;
 
             NewNoteDescription = string.Empty;
-            NewNoteBackground = NoteManager.BackgroundBrushes.Default;
 
             NoteDescriptionBox.Text = NewNoteDescription;
-            BackgroundButton.Background = NoteManager.SetBrush(NewNoteBackground);
+
+            this.Loaded += AddNoteWindowDialog_Loaded;
+        }
+
+        private void AddNoteWindowDialog_Loaded(object sender, RoutedEventArgs e)
+        {
+            NoteDescriptionBox.Focus();
         }
 
         private void AddNoteButton_Click(object sender, RoutedEventArgs e)
@@ -33,14 +36,18 @@ namespace TinyneProject.Dialogs
             this.DialogResult = false;
         }
 
-        private void BackgroundButton_Click(object sender, RoutedEventArgs e)
+        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            BackgroundSelectorWindowDialog windowDialog = new BackgroundSelectorWindowDialog(this);
-
-            if (windowDialog.ShowDialog()==true)
+            switch (e.Key)
             {
-                NewNoteBackground = windowDialog.SelectedBackground;
-                BackgroundButton.Background = NoteManager.SetBrush(NewNoteBackground);
+                case Key.Cancel:
+                    this.DialogResult = false;
+                    break;
+                case Key.Escape:
+                    this.DialogResult = false;
+                    break;
+                default:
+                    break;
             }
         }
     }

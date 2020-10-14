@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TinyneProject"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        Title="Tinyne" 
         
         Height="500" Width="280" 
         MinHeight="200" MinWidth="280" 
@@ -22,7 +22,7 @@
         <WindowChrome NonClientFrameEdges="None"
                       GlassFrameThickness="0"
                       ResizeBorderThickness="4"
-                      CaptionHeight="24"
+                      CaptionHeight="21"
                       CornerRadius="0"/>
     </WindowChrome.WindowChrome>
 

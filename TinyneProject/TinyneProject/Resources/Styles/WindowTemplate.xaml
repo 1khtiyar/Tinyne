@@ -101,12 +101,12 @@
                     <Border Padding="5">
                         <Grid>
                             <Border CornerRadius="5"
-                                Background="{DynamicResource DialogBackgroundBrush}"
-                                x:Name="Container"/>
+                                    Background="{DynamicResource DialogBackgroundBrush}"
+                                    x:Name="Container"/>
 
                             <Border CornerRadius="5"
-                                Background="{DynamicResource DialogBackgroundBrush}"
-                                x:Name="ShadowBorder">
+                                    Background="{DynamicResource DialogBackgroundBrush}"
+                                    x:Name="ShadowBorder">
                                 <Border.Effect>
                                     <DropShadowEffect BlurRadius="8"
                                                         ShadowDepth="1"

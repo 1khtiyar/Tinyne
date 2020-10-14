@@ -168,12 +168,6 @@
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>
-
-                        <!--<Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="BaseBorder" Property="Background" Value="{DynamicResource WindowButtonHoverBackBrush}"/>
-                            <Setter TargetName="IconItself" Property="Fill" Value="{DynamicResource WindowButtonHoverForeBrush}"/>
-                        </Trigger>-->
-
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
 
@@ -190,7 +184,7 @@
                             ClipToBounds="True" 
                             BorderThickness="0"
                             Background="{DynamicResource WhiteBrush1Opac}"
-                            Padding="9">
+                            Padding="9 0 9 0">
                         <Rectangle x:Name="IconItself" Style="{DynamicResource EditNoteImage}"/>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -216,7 +210,7 @@
                             ClipToBounds="True" 
                             BorderThickness="0"
                             Background="{DynamicResource WhiteBrush1Opac}"
-                            Padding="9">
+                            Padding="9 0 9 0">
                         <Rectangle x:Name="IconItself" Style="{DynamicResource DeleteNoteImage}"/>
                     </Border>
                     <ControlTemplate.Triggers>

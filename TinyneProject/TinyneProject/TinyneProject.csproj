@@ -96,30 +96,18 @@
     <Compile Include="Dialogs\AddNoteWindowDialog.xaml.cs">
       <DependentUpon>AddNoteWindowDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\BackgroundSelectorWindowDialog.xaml.cs">
-      <DependentUpon>BackgroundSelectorWindowDialog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\EditNoteWindowDialog.xaml.cs">
       <DependentUpon>EditNoteWindowDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\EnumToBrushConverter.cs" />
-    <Compile Include="Models\Note.cs" />
-    <Compile Include="Models\NoteManager.cs" />
-    <Compile Include="Models\OnPropertyChangedClass.cs" />
-    <Compile Include="Models\StorageData.cs" />
-    <Compile Include="Services\ParameterizedRelayCommand.cs" />
-    <Compile Include="Services\RelayCommand.cs" />
-    <Compile Include="Services\StorageIOService.cs" />
+    <Compile Include="Utils\Commands\ParameterizedRelayCommand.cs" />
+    <Compile Include="Utils\Commands\RelayCommand.cs" />
+    <Compile Include="Utils\Others\WindowResizer.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\AboutWindow.xaml.cs">
       <DependentUpon>AboutWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Dialogs\AddNoteWindowDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dialogs\BackgroundSelectorWindowDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -225,6 +213,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TinyneProject.Core\TinyneProject.Core.csproj">
+      <Project>{03378d66-9af8-49c7-a9f9-a7eb635f8c4f}</Project>
+      <Name>TinyneProject.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\Converters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

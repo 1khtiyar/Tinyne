@@ -1,5 +1,4 @@
 ﻿using System;
-using static TinyneProject.Models.NoteManager;
 
 namespace TinyneProject.Models
 {
@@ -17,29 +16,14 @@ namespace TinyneProject.Models
             }
         }
 
-
-        private BackgroundBrushes background;
-        public BackgroundBrushes Background
-        {
-            get => background;
-            set
-            {
-                background = value;
-                OnPropertyChanged();
-            }
-        }
-
-
-        public Note(string description, BackgroundBrushes brush)
+        public Note(string description)
         {
             Description = description;
-            Background = brush;
         }
 
         public Note()
         {
             Description = " ";
-            Background = BackgroundBrushes.Default;
         }
     }
 }

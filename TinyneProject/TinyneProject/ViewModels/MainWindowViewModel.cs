@@ -9,6 +9,8 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 
+using Tinyne.Utils.Others;
+
 using TinyneProject.Dialogs;
 using TinyneProject.Models;
 using TinyneProject.Services;
@@ -84,6 +86,8 @@ namespace TinyneProject.ViewModels
             window.MouseLeave += Window_MouseLeave;
             window.MouseEnter += Window_MouseEnter;
 
+            var windowResizer = new WindowResizer(this.window);
+
             #region Commands initializing
 
             CloseWindowCommand = new RelayCommand(CloseWindow);
@@ -116,7 +120,6 @@ namespace TinyneProject.ViewModels
 
             if (windowDialog.ShowDialog() == true)
             {
-                (note as Note).Background = windowDialog.CurrentNoteBackground;
                 (note as Note).Description = windowDialog.CurrentNoteDescription;
             }
         }
@@ -134,7 +137,6 @@ namespace TinyneProject.ViewModels
             {
                 currentData.Notes.Add(new Note()
                 {
-                    Background = windowDialog.NewNoteBackground,
                     Description = windowDialog.NewNoteDescription
                 });
             }

@@ -19,7 +19,6 @@ namespace TinyneProject.Dialogs
     public partial class EditNoteWindowDialog : Window
     {
         public string CurrentNoteDescription { get; set; }
-        public NoteManager.BackgroundBrushes CurrentNoteBackground { get; set; }
 
         public EditNoteWindowDialog(Note note,Window window)
         {
@@ -28,10 +27,15 @@ namespace TinyneProject.Dialogs
             this.Owner = window;
 
             CurrentNoteDescription = note.Description;
-            CurrentNoteBackground = note.Background;
 
             NoteDescriptionBox.Text = CurrentNoteDescription;
-            BackgroundButton.Background = NoteManager.SetBrush(CurrentNoteBackground);
+
+            this.Loaded += AddNoteWindowDialog_Loaded;
+        }
+
+        private void AddNoteWindowDialog_Loaded(object sender, RoutedEventArgs e)
+        {
+            NoteDescriptionBox.Focus();
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
@@ -45,14 +49,18 @@ namespace TinyneProject.Dialogs
             this.DialogResult = true;
         }
 
-        private void BackgroundButton_Click(object sender, RoutedEventArgs e)
+        private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            BackgroundSelectorWindowDialog windowDialog = new BackgroundSelectorWindowDialog(this);
-
-            if (windowDialog.ShowDialog() == true)
+            switch (e.Key)
             {
-                CurrentNoteBackground = windowDialog.SelectedBackground;
-                BackgroundButton.Background = NoteManager.SetBrush(CurrentNoteBackground);
+                case Key.Cancel:
+                    this.DialogResult = false;
+                    break;
+                case Key.Escape:
+                    this.DialogResult = false;
+                    break;
+                default:
+                    break;
             }
         }
     }
