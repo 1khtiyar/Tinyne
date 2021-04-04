@@ -2,7 +2,8 @@
 ![GitHub](https://img.shields.io/github/license/1khtiyar/Tinyne?style=flat-square) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/1khtiyar/Tinyne?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/1khtiyar/Tinyne?color=red&style=flat-square) ![GitHub All Releases](https://img.shields.io/github/downloads/1khtiyar/TInyne/total?color=success&style=flat-square)  
 # Tinyne
   
-## 📣 [Release v1.0.0 Stable](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0) 📣  
+~~📣 [Release v1.0.0 Stable](https://github.com/1khtiyar/Tinyne/releases/tag/v1.0.0) 📣~~
+## 📣 Building Tinyne 2! 📣  
 
 ## Content
 - [About](#about)
